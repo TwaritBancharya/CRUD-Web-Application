@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 30px auto; padding: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 8px 12px; border: 1px solid #ddd; text-align: left; }
+        a.button { display: inline-block; padding: 6px 10px; text-decoration: none; border-radius: 4px; background: #1976d2; color: white; }
+    </style>
+</head>
+<body>
+<h1>Users</h1>
+<a class="button" href="/add">➕ Add New User</a>
+
+<table>
+    <thead>
+        <tr><th>ID</th><th>Name</th><th>Email</th><th>Age</th><th>Phone</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}">1</td>
+            <td th:text="${user.name}">Name</td>
+            <td th:text="${user.email}">email@example.com</td>
+            <td th:text="${user.Age}">12</td>
+            <td th:text="${user.Phone}">9876543210</td>
+
+            <td>
+                <a th:href="@{'/edit/' + ${user.id}}">Edit</a> |
+                <a th:href="@{'/delete/' + ${user.id}}"
+                   onclick="return confirm('Are you sure?');">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

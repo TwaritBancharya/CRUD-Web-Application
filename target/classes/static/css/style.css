@@ -1,0 +1,84 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page heading */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+/* Table styling */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Form styling */
+form {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* Action links (Edit/Delete) */
+a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+a:hover {
+    color: #2980b9;
+}
